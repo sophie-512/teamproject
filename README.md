@@ -193,5 +193,5 @@
 ### skeleton_code\bp\templates\basic.html
 포트폴리오의 메뉴바 전체 적용 페이지
 
-## 시연영상 주소
+## 시연영상
 [KNU_SW해커톤_"다한"](https://youtu.be/tt7R-oqkt2U)
