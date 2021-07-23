@@ -1,19 +1,21 @@
-# KNU SW HACKATHON
-## ▶ 팀명 "다한"
-### 컴퓨터학부 글로벌소프트웨어융합전공 2020110289 이연수
-### 컴퓨터학부 글로벌소프트웨어융합전공 2020111395 김현지
+# KNU_SW_HACKATHON
+## 팀명 "다한"
+ 컴퓨터학부 글로벌소프트웨어융합전공 2020110289 이연수
+ 
+ 컴퓨터학부 글로벌소프트웨어융합전공 2020111395 김현지
 
 
-## ▶ 서비스명 
+## 서비스명(Service Name)
 ### "POFO: Portfolio For You"
 
-## ▶ 서비스 설명
+## 서비스 설명(Service Description)
 ### <주제>
-#### 대학생들을 위한 개인 포트폴리오 관리 사이트
+ 대학생들을 위한 개인 포트폴리오 관리 사이트
 
 ### <동기>
 저희는 2020학년도에 입학하여 대학 생활이 어떤 것인지 파악도 채 하기 전에, 코로나 19로 인해 입학과 동시에 비대면 대학생활을 할 수밖에 없었습니다. 
 학교에 입학한 지 1년 반이 지난 현재에도, 내가 하고 있는 것이 맞는 지, 내가 얼마나 배웠고, 앞으로 어떤 부분들을 더 배워야 할 지에 대한 고민들로 혼란스럽기만 합니다.
+기약없이 이어지고 있는 코로나19 상황으로 인해, 대학 생활에 대한 깊은 고민들과 학생들의 무력감은 더욱 커져만 가고 있습니다.
 이러한 문제점들을 해결하기 위해, 정확히는 나의 대학 생활에 스스로 가이드를 제공하고자, 그리고 같은 고민을 가지고 함께 머리를 싸매고 있는 우리의 학우들에게 직접 만든 가이드를 공유하고자 “포트폴리오 정리 사이트”를 구현하게 되었습니다.
 
 
@@ -106,8 +108,90 @@
 
 - __참조__: 학교에 대한 정보가 부족한 학생에게 알고있으면 유용한 경북대학교 사이트를 기재해놓은 페이지입니다. 다양한 홈페이지들로부터 SW교육센서, 인재개발원 등 유익한 정보들을 많이 얻을 수 있지만, 대부분의 학생들이 모르는 상태로 효율적으로 이용하지 못하는 경우가 많습니다. 이러한 아쉬움을 해소하고, 적절한 정보들을 통해 대학 생활을 하며 더욱 많은 기회들을 접할 수 있기를 바라는 마음으로 추가한 페이지입니다. 기재된 사이트들 외에도, 추가적으로 개인이 원하는 사이트를 추가하고 삭제할 수 있습니다.
 
-### <기대효과>
+## 환경(Environment)
+1. 프로그램 실행을 위한 소스코드 에디터 Visual Studio Code 설치가 필요합니다.
+2. vs code 실행 후 ctrl+shift+X 통해 확장 메뉴에서 "live server"를 검색하고, 설치를 진행합니다.
+3. python은 버전 3을 사용합니다.
+* 아래 실행 방법은 Window 운영체제 기반으로 설명되어 있습니다. (Mac/Linux 운영제체에 익숙하지 못해서.. 죄송합니다ㅠ)
 
-## ▶ 
+## 실행(Usage)
+프로젝트 전체의 메인 페이지와 포트폴리오 페이지의 세부 기능 작동 시 충돌을 막기 위해, 서로 다른 포트를 통해 접속이 가능하도록 하였습니다.
+- __첫 째__: h\ecoverde-master\ecoverde-master\index.html 선택
+    - ctrl+p → "> Live Server: Open with Live Server" 검색 후 클릭
+    - 프로젝트의 메인 페이지 실행 가능
+ 
+- __둘 째__: 
+    - 터미널 실행(Git Bash 기준)
+    - cd skeleton_code
+    - source myvenv/Scripts/activate
+    - (Django가 설지되어 있지 않다면) pip install django
+    - cd bp
+    - python manage.py runserver
+    - 포트폴리오 메인 페이지 실행 가능
 
+## 파일 설명(Files)
+### h\ecoverde-master\ecoverde-master\index.html
+프로젝트의 메인 페이지
 
+***
+
+### skeleton_code\bp\account\templates\home.html
+포트폴리오의 메인 페이지(로그인 페이지)
+
+### skeleton_code\bp\account\templates\signup.html
+포트폴리오의 회원가입 페이지
+
+***
+
+### skeleton_code\bp\blog\templates\blog.html
+포트폴리오의 '전공' 메인 페이지
+
+### skeleton_code\bp\blog\templates\liberal.html
+포트폴리오의 '교양' 메인 페이지
+
+### skeleton_code\bp\blog\templates\exter_act.html
+포트폴리오의 '대외활동' 메인 페이지
+
+### skeleton_code\bp\blog\templates\inter_act.html
+포트폴리오의 '교내활동' 메인 페이지
+
+### skeleton_code\bp\blog\templates\site.html
+포트폴리오의 '참조' 메인 페이지
+
+### skeleton_code\bp\blog\templates\new.html
+포트폴리오의 전공 글쓰기 페이지
+
+### skeleton_code\bp\blog\templates\new_liberal.html
+포트폴리오의 교양 글쓰기 페이지
+
+### skeleton_code\bp\blog\templates\new_exter_act.html
+포트폴리오의 대외활동 글쓰기 페이지
+
+### skeleton_code\bp\blog\templates\new_inter_act.html
+포트폴리오의 교내활동 글쓰기 페이지
+
+### skeleton_code\bp\blog\templates\new_site.html
+포트폴리오의 참조 추가하기 페이지
+
+### skeleton_code\bp\blog\templates\update.html
+포트폴리오의 전공 수정하기 페이지
+
+### skeleton_code\bp\blog\templates\update_liberal.html
+포트폴리오의 교양 수정하기 페이지
+
+### skeleton_code\bp\blog\templates\update_exter.html
+포트폴리오의 대외활동 수정하기 페이지
+
+### skeleton_code\bp\blog\templates\update_inter.html
+포트폴리오의 교내활동 수정하기 페이지
+
+### skeleton_code\bp\blog\templates\detail.html
+포트폴리오의 작성글 상세 페이지
+
+***
+
+### skeleton_code\bp\templates\basic.html
+포트폴리오의 메뉴바 전체 적용 페이지
+
+## 시연영상 주소
+[KNU_SW해커톤_"다한"](https://youtu.be/tt7R-oqkt2U)
